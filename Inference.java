@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package FuzzyLogic; // To be modified <=====
+package FL; // To be modified <=====
 
 /**
  *
