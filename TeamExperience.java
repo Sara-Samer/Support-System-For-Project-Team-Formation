@@ -6,9 +6,11 @@ public class TeamExperience{
 	
 	public TeamExperience() {
 		targetTeamExperience = 0;
+		getRange();
 	}
 	public TeamExperience(float projectFunding) {
 		targetTeamExperience = projectFunding;
+		getRange();
 	}
 	
 	public float geta(float x1, float y1, float x2, float y2) {
@@ -41,13 +43,13 @@ public class TeamExperience{
 	
 	public float[] getRange() {
 		float[] lineIntersection = new float[]{0, 0, 0};
-		if(targetTeamExperience <= beginner[0] && targetTeamExperience >= beginner[2]) {
+		if(targetTeamExperience >= beginner[0] && targetTeamExperience <= beginner[2]) {
 			lineIntersection[0] = calculateY(targetTeamExperience, beginner);
 		}
-		if(targetTeamExperience <= intermediate[0] && targetTeamExperience >= intermediate[2]) {
+		if(targetTeamExperience >= intermediate[0] && targetTeamExperience <= intermediate[2]) {
 			lineIntersection[1] = calculateY(targetTeamExperience, intermediate);
 		}
-		if(targetTeamExperience <= expert[0] && targetTeamExperience >= expert[2]) {
+		if(targetTeamExperience >= expert[0] && targetTeamExperience <= expert[2]) {
 			lineIntersection[2] = calculateY(targetTeamExperience, expert);
 		}
 		

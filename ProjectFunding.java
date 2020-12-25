@@ -46,16 +46,16 @@ public class ProjectFunding{
 	
 	public float[] getRange() {
 		float[] lineIntersection = new float[]{0, 0, 0, 0};
-		if(targetProjectFunding <= veryLow[0] && targetProjectFunding >= veryLow[3]) {
+		if(targetProjectFunding >= veryLow[0] && targetProjectFunding <= veryLow[3]) {
 			lineIntersection[0] = calculateY(targetProjectFunding, veryLow);
 		}
-		if(targetProjectFunding <= low[0] && targetProjectFunding >= low[3]) {
+		if(targetProjectFunding >= low[0] && targetProjectFunding <= low[3]) {
 			lineIntersection[1] = calculateY(targetProjectFunding, low);
 		}
-		if(targetProjectFunding <= medium[0] && targetProjectFunding >= medium[3]) {
+		if(targetProjectFunding >= medium[0] && targetProjectFunding <= medium[3]) {
 			lineIntersection[2] = calculateY(targetProjectFunding, medium);
 		}
-		if(targetProjectFunding <= high[0] && targetProjectFunding >= high[3]) {
+		if(targetProjectFunding >= high[0] && targetProjectFunding <= high[3]) {
 			lineIntersection[3] = calculateY(targetProjectFunding, high);
 		}
 		return lineIntersection;

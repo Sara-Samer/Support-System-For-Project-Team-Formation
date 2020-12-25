@@ -6,10 +6,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Variables: ");
         Integer var = sc.nextInt();
-        Integer project_funding = sc.nextInt();
-        Integer team_experience_level = sc.nextInt();
-
+        System.out.print("Project Fund: ");
+        Float project_funding = sc.nextFloat();
+        System.out.print("Experience Level: ");
+        Float team_experience_level = sc.nextFloat();
+        
+        FL fuzzy = new FL(project_funding, team_experience_level);
         
 
     }
