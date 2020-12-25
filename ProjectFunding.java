@@ -1,5 +1,3 @@
-import java.util.Vector;
-
 public class ProjectFunding{
 	private float[] veryLow = new float[]{0, 0, 10, 30}; 
 	private float[] low = new float[]{10, 30, 40, 60}; 
