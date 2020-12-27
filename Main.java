@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
@@ -36,30 +37,23 @@ public class Main {
         
         //fuzzy.elementAt(0).printSets();
         //fuzzy.elementAt(1).printSets();
-        Vector<Map<String, Float>> allRanges = new Vector<>();
+        Map<String, Map<String, Float>> allRanges = new HashMap<String, Map<String, Float>>();
         for(int i = 0 ; i < fuzzy.size(); i++) {
-        	allRanges.add(fuzzy.elementAt(i).getRange());
+        	allRanges.put(fuzzy.elementAt(i).getName(), fuzzy.elementAt(i).getRange());
         }
         
         String key = "";
+        String name = "";
         for(int i = 0 ; i < allRanges.size(); i++) {
-        	for(int j = 0 ; j < allRanges.elementAt(i).keySet().size(); j++) {
-        		key = (String) allRanges.elementAt(i).keySet().toArray()[j];
-        		System.out.println(key + "  =  " + allRanges.elementAt(i).get(key));
+        	name = (String) allRanges.keySet().toArray()[i];
+        	for(int j = 0 ; j < allRanges.get(name).size(); j++) {
+        		key = (String) allRanges.get(name).keySet().toArray()[j];
+        		System.out.println(key + "  =  " + allRanges.get(name).get(key));
         	}
         }
         
-       //-------------------------------------------------------------------------------------------
         
         
-        
-        /*System.out.print("Project Fund: ");
-        Float project_funding = sc.nextFloat();
-        System.out.print("Experience Level: ");
-        Float team_experience_level = sc.nextFloat();
-        
-        FL fuzzy = new FL(project_funding, team_experience_level);
-        */
 
     }
 }

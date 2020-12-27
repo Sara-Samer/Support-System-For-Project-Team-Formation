@@ -70,6 +70,11 @@ public class FuzzySet{
 		}
 		return lineIntersection;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	
 	public void printSets() {
 		System.out.println(name);
 		System.out.println(target);
