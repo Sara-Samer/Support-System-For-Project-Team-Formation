@@ -103,7 +103,7 @@ public class Inferencing {
 
             for (int i = 0; i < rules.size(); i++) {
 
-                String targetVariable = variables.get(i).pop();
+                // String targetVariable = variables.get(i).pop();
                 String targetLevel = levels.get(i).pop();
                 Stack<Float> values = new Stack<>();
                 for (int d = 0; d < variables.get(i).size(); d++) {
