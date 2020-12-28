@@ -107,7 +107,7 @@ public class FL {
 			if (max < value) {
 				max = value;
 				crispGroup = name;
-				System.out.println("here");
+				// System.out.println("here");
 			}
 		}
 		// System.out.print("sum: ");
